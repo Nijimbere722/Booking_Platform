@@ -2,22 +2,22 @@ import React from "react";
 
 function ListingCard({ listing }) {
   return (
-    <div
-      style={{
-        border: "1px solid #ccc",
-        padding: "12px",
-        borderRadius: "8px",
-        width: "250px",
-      }}
-    >
+    <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
       <img
-        src={listing.previewImage?.url}
-        alt={listing.name}
-        style={{ width: "100%", borderRadius: "8px" }}
+        src={listing?.previewImage?.url}
+        alt={listing?.name}
+        className="w-full h-48 object-cover"
       />
-      <h3>{listing.name}</h3>
-      <p>Price: ${listing.price?.rate}</p>
-      <p>Rating: {listing.starRating || "N/A"}</p>
+
+      <div className="p-4">
+        <h3 className="text-lg font-semibold">{listing?.name}</h3>
+        <p className="text-gray-500 text-sm mt-1">
+          Rating: {listing?.starRating || "N/A"}
+        </p>
+        <p className="text-blue-600 font-bold mt-2">
+          ${listing?.price?.rate || "N/A"} / night
+        </p>
+      </div>
     </div>
   );
 }

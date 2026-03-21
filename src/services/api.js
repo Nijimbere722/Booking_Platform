@@ -11,11 +11,8 @@ const api = axios.create({
 
 export const fetchListings = async (placeId = "ChIJN1t_tDeuEmsRUsoyG83frY4") => {
   const response = await api.get("/searchPropertyByPlaceId", {
-    params: {
-      placeId: placeId,
-    },
+    params: { placeId },
   });
-
   return response.data;
 };
 
