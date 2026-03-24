@@ -4,26 +4,66 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SmartStay</title>
+    <title>SmartStay — Find Your Perfect Stay</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
-              rose: {
-                50: '#fff1f2',
-                100: '#ffe4e6',
-                400: '#fb7185',
-                500: '#f43f5e',
-                600: '#e11d48',
+              teal: {
+                50: '#f0fdfa',
+                100: '#ccfbf1',
+                200: '#99f6e4',
+                400: '#2dd4bf',
+                500: '#14b8a6',
+                600: '#0d9488',
+                700: '#0f766e',
+                800: '#115e59',
+                900: '#134e4a',
+              },
+              cream: {
+                50: '#fefdf8',
+                100: '#fdf9ed',
+                200: '#faf0d0',
+              },
+              gold: {
+                400: '#fbbf24',
+                500: '#f59e0b',
               }
+            },
+            fontFamily: {
+              display: ['Playfair Display', 'serif'],
+              body: ['Plus Jakarta Sans', 'sans-serif'],
+            },
+            boxShadow: {
+              'card': '0 4px 24px rgba(0,0,0,0.06)',
+              'card-hover': '0 12px 40px rgba(0,0,0,0.12)',
+              'nav': '0 2px 20px rgba(0,0,0,0.06)',
             }
           }
         }
       }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      * { box-sizing: border-box; }
+      body { font-family: 'Plus Jakarta Sans', sans-serif; background: #fefdf8; }
+      h1, h2, h3 { font-family: 'Playfair Display', serif; }
+      .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+      .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
+      .img-zoom img { transition: transform 0.5s ease; }
+      .img-zoom:hover img { transform: scale(1.06); }
+      input[type="range"] { accent-color: #0d9488; }
+      input[type="date"] { color-scheme: light; }
+      .animate-fade-in { animation: fadeIn 0.5s ease forwards; }
+      @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+      .stagger-1 { animation-delay: 0.05s; }
+      .stagger-2 { animation-delay: 0.1s; }
+      .stagger-3 { animation-delay: 0.15s; }
+      .gradient-hero { background: linear-gradient(135deg, #134e4a 0%, #0d9488 50%, #0f766e 100%); }
+      .badge-superhost { background: linear-gradient(135deg, #f59e0b, #fbbf24); }
+    </style>
   </head>
   <body>
     <div id="root"></div>

@@ -2,7 +2,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { AppProvider } from './context/AppContext';
-import Navbar from './components/navbar';
+import Navbar from './components/Navbar'; 
 import Home from './pages/Home';
 import ListingDetails from './pages/ListingDetails';
 import Bookings from './pages/Bookings';
